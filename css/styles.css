@@ -621,7 +621,8 @@ img {
     position: relative;
 }
 
-.field-input {
+.field-input,
+.field-textarea {
     display: block;
     width: 100%;
     height: 40px;
@@ -629,9 +630,11 @@ img {
     border-radius: 4px;
     padding-left: 42px;
     outline: none;
+    cursor: pointer;
 }
 
-.field-input:focus {
+.field-input:focus,
+.field-textarea:focus {
     border-color: var(--accentColor);
 }
 
@@ -645,4 +648,13 @@ img {
 
 .field-input:focus+.field-icon {
     fill: var(--accentColor);
+}
+
+.field-textarea {
+    resize: none;
+    height: 120px;
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
 }
