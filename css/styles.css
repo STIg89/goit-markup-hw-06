@@ -191,7 +191,6 @@ img {
 
 .footer-container {
     display: flex;
-    gap: 70px;
     align-items: baseline;
 }
 
@@ -230,6 +229,7 @@ img {
 
 .footer-socials {
     width: 210px;
+    margin-left: 70px;
 }
 
 .footer-thumb .social-link {
@@ -266,14 +266,19 @@ img {
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
     padding-left: 16px;
-    outline: 1px solid rgba(245, 245, 245, 0);
-    transition: outline-color var(--duration) var(--cubic),
-    border-color var(--duration) var(--cubic)
+    outline: none;
+    transition: border-color var(--duration) var(--cubic),
+    box-shadow var(--duration) var(--cubic);
+    cursor: pointer;
+}
+
+.footer-input:hover {
+    border-color: var(--accentColor);
 }
 
 .footer-input:focus {
-    border-color: var(--accentColor);
-    outline-color: whitesmoke;
+    border-color: whitesmoke;
+    box-shadow: 0px 0px 0px 1px whitesmoke;
 }
 
 .footer-form {
@@ -632,8 +637,9 @@ img {
     transition: color var(--duration) var(--cubic);
 }
 
-.modal>strong {
+.modal>p {
     display: block;
+    font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
@@ -641,10 +647,11 @@ img {
     margin-bottom: 12px;
 }
 
-.input-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.form-field {
+    margin-bottom: 10px;
+}
+
+.modal-form>.comment {
     margin-bottom: 20px;
 }
 
@@ -670,15 +677,22 @@ img {
     border-radius: 4px;
     padding-left: 42px;
     cursor: pointer;
-    outline: #00000000;
+    outline: none;
     transition: border-color var(--duration) var(--cubic),
-    outline var(--duration) var(--cubic);
+    box-shadow var(--duration) var(--cubic);
+}
+
+.field-input:hover,
+.field-textarea:hover,
+.check-box:focus+.check-square,
+.check-square:hover {
+    border-color: var(--accentColor);
 }
 
 .field-input:focus,
 .field-textarea:focus {
-    border-color: var(--accentColor);
-    outline: 1px solid black;
+    border-color: black;
+    box-shadow: 0px 0px 0px 1px black;
 }
 
 .field-icon {
@@ -687,10 +701,12 @@ img {
     top: 50%;
     transform: translateY(-50%);
     fill: var(--primaryColor);
+    cursor: pointer;
     transition: fill var(--duration) var(--cubic);
 }
 
-.field-input:focus+.field-icon {
+.field-input:focus+.field-icon,
+.field-input:hover+.field-icon {
     fill: var(--accentColor);
 }
 
