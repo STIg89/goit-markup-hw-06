@@ -42,7 +42,7 @@ img {
 }
 
 .benefits,
-.whatdoing,
+.work,
 .team,
 .clients,
 .cards {
@@ -79,7 +79,7 @@ img {
 }
 
 .header-container,
-.whatdoing-images,
+.work-images,
 .team-cards,
 .benefits-columns,
 .clients-list,
@@ -343,7 +343,7 @@ img {
 }
 
 .benefits-title,
-.porfolio-title {
+.portfolio-title {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -378,15 +378,15 @@ img {
     color: var(--secondaryColor);
 }
 
-.whatdoing {
+.work {
     padding-top: 0;
 }
 
-.whatdoing-image {
+.work-image {
     position: relative;
 }
 
-.whatdoing-image p {
+.work-image p {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -404,7 +404,7 @@ img {
     background: rgba(47, 48, 58, 0.8);
 }
 
-.whatdoing-title,
+.work-title,
 .team-title,
 .clients-title {
     font-weight: 700;
@@ -476,7 +476,7 @@ img {
     border: 1px solid var(--accentColor);
 }
 
-/* PORFOLIO -----------------------------------------------------------------------*/
+/* PORTFOLIO -----------------------------------------------------------------------*/
 
 .filter-list {
     margin-bottom: 50px;
